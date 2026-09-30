@@ -1,7 +1,7 @@
 # charles motta: grade thingy or whatever
 while True:
     try:
-        grade = int(input("what is your grade out of 100"))
+        grade = int(input("what is your grade out of 100 "))
     except:
         print("sorry but that is not a proper number")
     else:
@@ -29,3 +29,4 @@ while True:
             print(f"your grade is {grade}% you have a D-")
         else:
             print(f"your grade is {grade}% which is an F. you're failing your classes... LOCK IN")
+            break
