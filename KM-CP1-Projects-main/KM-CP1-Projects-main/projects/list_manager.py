@@ -7,7 +7,7 @@ while True:
         list.append(input("what do you want to add to the list? "))
         print(*list )
     elif action == "remove":
-        list.pop(input("what do you want to remove? "))
+        list.remove(input("what do you want to remove? "))
         print(*list)
     elif action == "view":
         print(*list)
