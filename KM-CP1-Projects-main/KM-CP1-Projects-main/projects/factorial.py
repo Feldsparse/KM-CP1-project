@@ -8,13 +8,10 @@ while True:
         print("sorry but that's not a valid number")
     else:
         list.append(number)
+        list.append('*')
         for num in range(number, 0, -1):
             list.append(num - 1)
-        len(list)
-        def list(len(list)):
-            return (len(list))
-        map(list)
-        print(list)
+            list.append('*')
         number = math.factorial(number)
-        print(number)
+        print(f"{list} = {number}")
         break
