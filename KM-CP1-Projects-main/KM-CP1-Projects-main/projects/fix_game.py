@@ -14,21 +14,23 @@ for round_num in range(1, rounds + 1):
     print(f"--- Round {round_num} ---")
 
     while found == False:
-        guess = int(input("Guess a number between 1 and 20: "))
-        guesses = guesses + 1
-
-        if guess == secret_number: # added ":". syntax error
-            print(f"Correct! It took you {guesses} guesses.")
-            found = True
-        elif guess < secret_number:
-            print("Too low!")
-        elif guess > secret_number:
-            print("Too high!")
-
-    scores.append(guesses)
+        try:
+            guess = int(input("Guess a number between 1 and 20: "))
+        except:
+            print("use numbers") #idiot proofed it: runtime error
+        else:
+            guesses = guesses + 1
+            if guess == secret_number: # added ":". syntax error
+                print(f"Correct! It took you {guesses} guesses.")
+                found = True
+                scores.append(guesses) # moved it so that it would add the guesses at a time that actually works: Logic error
+            elif guess < secret_number:
+                print("Too low!")
+            elif guess > secret_number:
+                print("Too high!")
 
 print("\n--- Game Over ---")
-print("Your guesses per round: " + scores)
+print(f"Your guesses per round:  {scores}") #converted it  to an f string: runtime error
 
 total = 0
 for score in scores:
