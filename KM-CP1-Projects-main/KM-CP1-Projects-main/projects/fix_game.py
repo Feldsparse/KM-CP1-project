@@ -30,6 +30,7 @@ for round_num in range(1, rounds + 1):
                 print("Too high!")
 
 print("\n--- Game Over ---")
+
 print(f"Your guesses per round:  {scores}") #converted it  to an f string: runtime error
 
 total = 0
