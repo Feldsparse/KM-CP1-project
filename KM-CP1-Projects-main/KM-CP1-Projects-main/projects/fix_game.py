@@ -23,7 +23,7 @@ for round_num in range(1, rounds + 1):
             if guess == secret_number: # added ":". syntax error
                 print(f"Correct! It took you {guesses} guesses.")
                 found = True
-                scores.append(guesses) # moved it so that it would add the guesses at a time that actually works: Logic error
+                scores.append(guesses)
             elif guess < secret_number:
                 print("Too low!")
             elif guess > secret_number:
@@ -35,14 +35,13 @@ print(f"Your guesses per round:  {scores}") #converted it  to an f string: runti
 
 total = 0
 for score in scores:
-    total = 0
-    total = total + score
+    total = total + score #removed the thing resetting the total: logic error
 
 average = total / rounds
 print("Your average guesses per round was " + str(average))
 
 best_round = scores[0]
-for i in range(1, rounds - 1):
+for i in range(1, rounds): #removed the -1 to fix it: logic error
     if scores[i] < best_round:
         best_round = scores[i]
 
