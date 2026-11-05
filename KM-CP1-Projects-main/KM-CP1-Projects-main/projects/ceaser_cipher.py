@@ -60,3 +60,5 @@ if encrypt_or_decrypt == "encrypt":
     encrypt()
 else:
     decrypt()
+
+#mmmmmmmmm spaghetti code (* ´ ﹃｀*)
