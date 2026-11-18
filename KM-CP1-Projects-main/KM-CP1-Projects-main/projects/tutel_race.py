@@ -1,12 +1,8 @@
 #charles m: racing tutels
 import random
 turtles = 0
-import turtle as tutel_red
-import turtle as tutel_blue
-import turtle as tutel_yellow
-import turtle as tutel_black
-import turtle as tutel_green
-import turtle as tutel_zomp #yes that's a real color look it up
+import turtle as t
+tutel_red = t.Turtle()
 
 tutel_red.shape("turtle") 
 tutel_red.pencolor("red")
